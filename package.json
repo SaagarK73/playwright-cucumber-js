@@ -1,0 +1,21 @@
+{
+  "name": "playwright-sagar",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx cucumber-js --require ./steps/*.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.46.0",
+    "@types/node": "^22.1.0",
+    "cucumber": "^6.0.7"
+  },
+  "dependencies": {
+    "@cucumber/cucumber": "^10.8.0",
+    "dotenv": "^16.4.5",
+    "playwright": "^1.46.0"
+  }
+}
