@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "npx cucumber-js --require ./steps/*.js"
+    "test": "npx cucumber-js --require ./steps/*.js",
+    "test:dev": "npx cucumber-js --require ./steps/*.js --tags @dev"
   },
   "author": "",
   "license": "ISC",
