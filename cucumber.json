@@ -1,5 +1,8 @@
 {
     "default": {
+        "formatOptions": {
+            "snippetInterface": "async-await"
+        },
         "require": [
             "steps-definitions/*.js",
             "pages/*.js",

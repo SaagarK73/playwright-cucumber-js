@@ -1,9 +1,9 @@
-const { Dashboard } = require("./dashboard");
-const { LoginPage } = require("./login")
+const LoginPage = require("./login");
+const Dashboard = require("./dashboard");
 
 module.exports = class PageObjects {
-    constructor() {
-        this.login = new LoginPage();
-        this.dashboard = new Dashboard();
+    constructor(page) {
+        this.login = new LoginPage(page);
+        this.dashboard = new Dashboard(page);
     }
 }
