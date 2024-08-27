@@ -10,7 +10,8 @@
         ],
         "format": [
             "html:report/cucumber-report.html",
-            "json:report/cucumber-report.json"
+            "json:report/cucumber-report.json",
+            "junit:report/cucumber-report.xml"
         ]
     }
 }

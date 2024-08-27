@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<testsuite failures="1" skipped="0" name="cucumber-js" time="27.969482594" tests="3">
+  <testcase classname="Login Feature" name="Login to OrangeHRM" time="8.869172598000002">
+    <system-out><![CDATA[When I Visit the login page...............................................passed
+And I enter username......................................................passed
+And I enter Password......................................................passed
+And I click on Login button...............................................passed
+Then I verify user is logged in...........................................passed]]></system-out>
+  </testcase>
+  <testcase classname="Login Feature" name="Login to OrangeHRM - Negative - Custom Paramters" time="9.456600297">
+    <system-out><![CDATA[When I Visit the login page...............................................passed
+And I enter username......................................................passed
+And I enter invalid Password..............................................passed
+And I click on Login button...............................................passed
+Then I verify user is not logged in.......................................passed]]></system-out>
+  </testcase>
+  <testcase classname="Login Feature" name="Login to OrangeHRM - Failure - Screenshot" time="9.643709698999999">
+    <failure type="Error" message="[2mexpect([22m[31mreceived[39m[2m).[22mtoBe[2m([22m[32mexpected[39m[2m) // Object.is equality[22m&#xA;&#xA;Expected: [32m2[39m&#xA;Received: [31m1[39m"><![CDATA[Error: [2mexpect([22m[31mreceived[39m[2m).[22mtoBe[2m([22m[32mexpected[39m[2m) // Object.is equality[22m
+
+Expected: [32m2[39m
+Received: [31m1[39m
+    at Proxy.<anonymous> (C:\Users\Shruti\Odin\playwright-sagar\node_modules\playwright\lib\matchers\expect.js:198:37)
+    at CustomWorld.<anonymous> (C:\Users\Shruti\Odin\playwright-sagar\steps-definitions\login.js:25:15)]]></failure>
+    <system-out><![CDATA[When I Visit the login page...............................................passed
+Then an element that does not exist is checked............................failed]]></system-out>
+  </testcase>
+</testsuite>
