@@ -22,10 +22,10 @@ jobs:
       - name: Run tests
         run: npm run test
 
-        - uses: deblockt/cucumber-report-annotations-action@v1.7
-          with:
-            access-token: ${{ secrets.GITHUB_TOKEN }}
-            path: "**/cucumber-report.json"
+      - uses: deblockt/cucumber-report-annotations-action@v1.7
+        with:
+          access-token: ${{ secrets.GITHUB_TOKEN }}
+          path: "**/cucumber-report.json"
 
       - name: List files in the repository
         run: |
