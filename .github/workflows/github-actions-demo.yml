@@ -23,6 +23,7 @@ jobs:
         run: npm run test
 
       - uses: deblockt/cucumber-report-annotations-action@v1.7
+        if: always()
         with:
           access-token: ${{ secrets.GITHUB_TOKEN }}
           path: "**/cucumber-report.json"
