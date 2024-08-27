@@ -16,6 +16,9 @@ jobs:
       - name: Setup Node
         run: npm ci
 
+      - name: Setup Playwright
+        run: npx playwright install chromium
+
       - name: Run tests
         run: npm run test
 
