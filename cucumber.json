@@ -8,6 +8,6 @@
             "pages/*.js",
             "utils/*.js"
         ],
-        "format": ["html:cucumber-report.html"]
+        "format": ["html:report/cucumber-report.html"]
     }
 }

@@ -1,9 +1,12 @@
-const { setWorldConstructor, Before, After, setDefaultTimeout } = require('@cucumber/cucumber');
+const { setWorldConstructor, Before, After, setDefaultTimeout, World } = require('@cucumber/cucumber');
 const { chromium } = require('playwright');
 const PageObjects = require('../pages/page-objects');
+const path = require('path');
 
-class CustomWorld {
-  constructor() {}
+class CustomWorld extends World{
+  constructor(attach) {
+    super(attach);
+  }
 
   async setUp() {
     this.browser = await chromium.launch({ headless: false });
@@ -25,6 +28,10 @@ Before(async function () {
   await this.setUp();
 });
 
-After(async function () {
-  await this.tearDown();
+After(async function (scenario) {
+    if (scenario.result.status === 'FAILED') {
+        const buffer = await this.page.screenshot({path: `./report/screenshots/${scenario.pickle.name}.png`},)
+        this.attach(buffer, { mediaType: 'image/png' });
+    }
+    await this.tearDown();
 });

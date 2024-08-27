@@ -12,7 +12,7 @@ module.exports = class Dashboard {
     }
 
     async verifyDashboardisVisible(isLoggedIn) {
-        await expect(this.page.locator(SELECTORS.userDropdown)).toBeAttached({ attached: isLoggedIn, timeout: 50000 })
+        await expect(this.page.locator(SELECTORS.userDropdown)).toBeAttached({ attached: isLoggedIn, timeout: 30000 })
     }
 
     async clickOnMyInfo() {
