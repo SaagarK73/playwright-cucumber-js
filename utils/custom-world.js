@@ -9,7 +9,7 @@ class CustomWorld extends World{
   }
 
   async setUp() {
-    this.browser = await chromium.launch({ headless: false });
+    this.browser = await chromium.launch({ headless: true });
     this.context = await this.browser.newContext();
     this.page = await this.context.newPage();
     this.appPages = new PageObjects(this.page)
@@ -18,6 +18,7 @@ class CustomWorld extends World{
   async tearDown() {
     if (this.page)    await this.page.close();
     if (this.context)   await this.context.close();
+    if (this.browser)   await this.browser.close();
   }
 }
 
