@@ -18,6 +18,7 @@ class CustomWorld extends World{
   async tearDown() {
     if (this.page)    await this.page.close();
     if (this.context)   await this.context.close();
+    if (this.browser)   await this.browser.close();
   }
 }
 
